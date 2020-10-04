@@ -32,9 +32,7 @@ public class PessoaService {
 	public void update(Long id, Pessoa pessoa) {
 		Pessoa pessoaDesatualizada = findById(id);
 		updateData(pessoaDesatualizada, pessoa);
-		repository.save(pessoaDesatualizada);
-		
-		
+		repository.save(pessoaDesatualizada);	
 	}
 	
 	private void updateData(Pessoa pessoaDesatualizada, Pessoa pessoa) {

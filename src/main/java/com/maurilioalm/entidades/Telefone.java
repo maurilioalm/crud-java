@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Telefone implements Serializable {
@@ -17,6 +18,12 @@ public class Telefone implements Serializable {
 	private int ddd;
 	private String numero;
 	private String tipo;
+
+	@ManyToOne
+	private Pessoa pessoa;
+
+	public Telefone() {
+	}
 
 	public Telefone(int ddd, String numero, String tipo) {
 		this.ddd = ddd;
